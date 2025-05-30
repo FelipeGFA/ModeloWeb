@@ -1,0 +1,5 @@
+Flask
+Tensorflow
+Pillow
+Numpy
+Flask-Cors
