@@ -6,20 +6,21 @@ Este projeto é composto por um backend em Python e um frontend em Next.js.
 
 ### Backend
 
-1.  Navegue até o diretório `backend/`:
-    ```bash
-    cd backend
-    ```
-2.  Crie e ative um ambiente virtual:
+1.  Crie e ative um ambiente virtual:
     ```bash
     python -m venv venv
     source venv/bin/activate  # Linux/macOS
     # venv\Scripts\activate   # Windows
     ```
-3.  Instale as dependências:
+2.  Instale as dependências:
     ```bash
     pip install -r requirements.txt
+ 
+3.  Navegue até o diretório `backend/`:
+    ```bash
+    cd backend
     ```
+    
 4.  Execute o backend:
     ```bash
     python app.py
