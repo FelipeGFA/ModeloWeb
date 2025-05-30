@@ -20,7 +20,7 @@ Este projeto é composto por um backend em Python e um frontend em Next.js.
     ```bash
     cd backend
     ```
-    ```
+    
 4.  Execute o backend:
     ```bash
     python app.py
