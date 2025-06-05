@@ -281,23 +281,23 @@ export default function ActionRecognitionInterface() {
                 {analysisResults.map((result) => (
                   <Card
                     key={result.id}
-                    className="group border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white/90 backdrop-blur-sm overflow-hidden"
+                    className={`group border-0 shadow-lg hover:shadow-2xl bg-white/90 backdrop-blur-sm overflow-hidden transition-all duration-500 ease-in-out flex flex-col ${result.showDetails ? 'h-auto' : 'h-full'}`}
                   >
                     <div className="relative">
                       <Image
                         src={result.image || "/placeholder.svg"}
                         alt={`Análise ${result.id}`}
-                        width={300}
-                        height={200}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                        width={500}
+                        height={500}
+                        className={`w-full ${result.showDetails ? 'h-auto object-contain' : 'h-48 object-cover'} group-hover:scale-105 transition-all duration-500 ease-in-out`}
                       />
                       <div
                         className={`absolute inset-0 bg-gradient-to-t ${result.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}
                       />
                     </div>
 
-                    <CardContent className="p-6 space-y-4">
-                      <div className="flex items-center justify-between">
+                    <CardContent className="p-6 space-y-4 flex flex-col items-start flex-grow">
+                      <div className="flex items-center justify-between w-full">
                         <Badge className={`bg-gradient-to-r ${result.color} text-white px-3 py-1 text-sm font-semibold`}>
                           {result.action}
                         </Badge>
