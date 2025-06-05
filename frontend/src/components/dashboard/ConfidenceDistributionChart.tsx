@@ -5,12 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 interface ConfidenceDistributionChartProps {
   data: {
     name: string;
-    confidence: number;
+    Confiança: number;
   }[];
 }
 
 export function ConfidenceDistributionChart({ data }: ConfidenceDistributionChartProps) {
-  const maxConfidenceEntry = data.reduce((prev, current) => (prev.confidence > current.confidence ? prev : current), data[0]);
+  const maxConfidenceEntry = data.reduce((prev, current) => (prev.Confiança > current.Confiança ? prev : current), data[0]);
 
   return (
     <Card className="border-0 shadow-xl bg-white/80 backdrop-blur-sm">
@@ -36,7 +36,7 @@ export function ConfidenceDistributionChart({ data }: ConfidenceDistributionChar
             <YAxis type="category" dataKey="name" width={100} />
             <Tooltip />
             <Legend />
-            <Bar dataKey="confidence">
+            <Bar dataKey="Confiança">
               {data.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}

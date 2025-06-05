@@ -164,7 +164,7 @@ export default function ActionRecognitionInterface() {
         .filter(stat => stat.action !== "Média Geral")
         .map(stat => ({
           name: stat.action,
-          confidence: stat.percentage,
+          Confiança: stat.percentage,
         })));
 
     } catch (error) {

@@ -20,14 +20,14 @@ export function PercentageDistributionChart({ data }: PercentageDistributionChar
           <CardTitle className="flex items-center gap-3 text-xl">Distribuição Percentual</CardTitle>
       </CardHeader>
       <CardContent>
-        <ResponsiveContainer width="100%" height={350}>
+        <ResponsiveContainer width="100%" height={435}>
           <PieChart>
             <Pie
               data={data}
               cx="50%"
               cy="40%"
               labelLine={false}
-              outerRadius={80}
+              outerRadius={115}
               fill="#8884d8"
               dataKey="value"
             >
